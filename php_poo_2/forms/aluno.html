@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crachá-Escola</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body style="background-color: #f3f3f3;">
+  <nav class="navbar bg-dark-subtle">
+    <div class="container-fluid">
+      <a class="navbar-brand m-auto fw-bold" href="#">GERADOR DE CRACHÁ PARA ESCOLAS</a>
+    </div>
+  </nav>
+  <main class="d-flex flex-wrap justify-content-center aling-content-center">
+    <form action="../src/controller/controllerAluno.php" method="POST" style="width: 600px; margin-top: 50px; border-radius: 10px;" class="bg-dark-subtle p-3">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="nome" name="nome">
+        <label for="nome">Nome</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="escola" name="escola">
+        <label for="escola">Escola</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="turma" name="turma">
+        <label for="escola">Turma</label>
+      </div>
+      <div class="form mb-3">
+        <input type="file" class="form-control" style="height: 100%;" id="foto" name="foto">
+      </div>
+      <div class="mb-3 d-flex justify-content-between">
+        <input type="submit" class="form-control h-25 mr-3 btn btn-light w-25" id="floatingPassword" value="Finalizar" name="finalizar">
+      </div>
+    </form>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
