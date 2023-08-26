@@ -8,13 +8,19 @@
       $escola = $_POST['escola'];
       $foto = $_POST['foto'];
       $turma = $_POST['turma'];
+      $cargo = $_POST['cargo'];
       
 
-      $modal = new Aluno($nome, $escola, $foto);
+      $modal = new Aluno($nome, $escola, $foto, $cargo);
       $setTurma = $modal->setDadosAluno($turma);
+
       $dados = $modal->getDadosAluno();
-      $view = new ViewCracha();
-      $vew = $view->render($dados[0], $dados[1], $dados[2], $dados[3]);
+      $turmaAluno = $modal->getTurma();
+      $cor = $modal->definirCor();
+
+      $view = new ViewCracha($dados[0], $dados[1], $dados[2], $dados[3], $cor);
+      $vew = $view->setTurma($turmaAluno);
+      $cracha = $view->getCracha();
     }
   }
 

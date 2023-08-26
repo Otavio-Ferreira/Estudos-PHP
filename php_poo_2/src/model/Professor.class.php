@@ -2,25 +2,28 @@
   include_once "Escola.class.php";
   include_once "cor.php";
 
-  private $diciplina;
-  private $cargo;
-
   class Professor extends Escola implements cor{
-    public function __construct($nome, $escola, $foto){
-      parent::__construct($nome, $escola, $foto);
+
+    private $diciplina;
+
+    public function __construct($nome, $escola, $foto, $cargo){
+      parent::__construct($nome, $escola, $foto, $cargo);
     }
 
-    public function setDadosProfessor($cargo, $diciplina){
+    public function setDadosProfessor($diciplina){
       $this->diciplina = $diciplina;
-      $this->cargo = $diciplina;
     }
 
     public function getDadosProfessor(){
-      return [$this->diciplina, $this->cargo];
+      return [$this->nome, $this->escola, $this->foto, $this->cargo];
+    }
+
+    public function getDiciplina(){
+      return $this->diciplina;
     }
 
     public function definirCor(){
-      return "blue"
+      return "blue";
     }
   }
 ?>
